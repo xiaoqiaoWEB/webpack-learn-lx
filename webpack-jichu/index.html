@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!--把共同部分取出来 不用路径加载 直接放到页面-->
+    <script type="text/javascript">
+        <%=
+            compilation.assets[htmlWebpackPlugin.files.chunks.main.entry.substr(htmlWebpackPlugin.files.publicPath.length)].source()
+         %>
+    </script>
+</head>
+<body>
+<div class="header">
+    <% for(var key in htmlWebpackPlugin) {%>
+        <%= key %>
+    <%}%>
+    <hr/>
+    <prev>
+    <% for(var key in htmlWebpackPlugin.options) {%>
+    <%= key %> : <%= htmlWebpackPlugin.options[key] %>
+    <%}%>
+    </prev>
+    <hr/>
+    <% for(var key in htmlWebpackPlugin.files) {%>
+    <%= key %>:<%= JSON.stringify(htmlWebpackPlugin.files[key]) %>
+    <%}%>
+    <!--这里是注释-->
+</div>
+
+<!---- 选择引入 chunks 里面配置的 js 文件 --->
+<% for(var k in htmlWebpackPlugin.files.chunks) { %>
+    <% if(k !== 'main') {%>
+        <script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks[k].entry %>"></script>
+    <%}%>
+<%}%>
+</body>
+</html>

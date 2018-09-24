@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webpack App</title>
+    <!--把共同部分取出来 不用路径加载 直接放到页面-->
+    <script type="text/javascript">
+        /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "http://cnd.com/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports) {
+
+function fn(str) {
+    console.log(str)
+}
+
+fn('sdddd');
+
+
+/***/ })
+/******/ ]);
+    </script>
+</head>
+<body>
+<div class="header">
+    
+        files
+    
+        options
+    
+    <hr/>
+    <prev>
+    
+    template : D:\webpack-jichu\node_modules\html-webpack-plugin\lib\loader.js!D:\webpack-jichu\index.html
+    
+    templateParameters : function templateParametersGenerator(compilation, assets, options) {
+  return {
+    compilation: compilation,
+    webpack: compilation.getStats().toJson(),
+    webpackConfig: compilation.options,
+    htmlWebpackPlugin: {
+      files: assets,
+      options: options
+    }
+  };
+}
+    
+    filename : a.html
+    
+    hash : false
+    
+    inject : false
+    
+    compile : true
+    
+    favicon : false
+    
+    minify : false
+    
+    cache : true
+    
+    showErrors : true
+    
+    chunks : main,a,c
+    
+    excludeChunks : 
+    
+    chunksSortMode : auto
+    
+    meta : [object Object]
+    
+    title : Webpack App
+    
+    xhtml : false
+    
+    </prev>
+    <hr/>
+    
+    publicPath:"http://cnd.com/"
+    
+    chunks:{"main":{"size":61,"entry":"http://cnd.com/js/main-3e738468aedd8b1fafdd.js","hash":"3e738468aedd8b1fafdd","css":[]},"c":{"size":21,"entry":"http://cnd.com/js/c-e9625b424f3c26e2aab7.js","hash":"e9625b424f3c26e2aab7","css":[]},"a":{"size":25,"entry":"http://cnd.com/js/a-00855dc9503056c0c6df.js","hash":"00855dc9503056c0c6df","css":[]}}
+    
+    js:["http://cnd.com/js/main-3e738468aedd8b1fafdd.js","http://cnd.com/js/c-e9625b424f3c26e2aab7.js","http://cnd.com/js/a-00855dc9503056c0c6df.js"]
+    
+    css:[]
+    
+    manifest:
+    
+    <!--这里是注释-->
+</div>
+
+<!---- 选择引入 chunks 里面配置的 js 文件 --->
+
+    
+
+    
+        <script type="text/javascript" src="http://cnd.com/js/c-e9625b424f3c26e2aab7.js"></script>
+    
+
+    
+        <script type="text/javascript" src="http://cnd.com/js/a-00855dc9503056c0c6df.js"></script>
+    
+
+</body>
+</html>
