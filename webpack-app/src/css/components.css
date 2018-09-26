@@ -1,0 +1,25 @@
+@import "./css.css";
+
+body,html{
+    margin: 0;
+    padding: 0;
+    background: aquamarine;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.filx{
+    display: flex;
+    border-radius: 50px;
+}
+.radius{
+    border-radius: 30px;
+}
+
+.box{
+    transform: translateX(-120px);
+}
