@@ -1,0 +1,10 @@
+.box{
+    width: 100px;
+    height: 100px;
+    transform: translateX(-180px);
+    display: flex;
+    transition: 2s all;
+}
+body,html{
+    background: url("../img/done.svg") repeat;
+}
